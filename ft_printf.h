@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnataraj <hnataraj@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: ubuntu_22 <ubuntu_22@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:44:58 by hnataraj          #+#    #+#             */
-/*   Updated: 2025/08/06 12:40:32 by hnataraj         ###   ########.fr       */
+/*   Updated: 2025/08/06 19:56:16 by ubuntu_22        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdint.h>
 # include <unistd.h>
 
 # if defined(__APPLE__)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnataraj <hnataraj@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: ubuntu_22 <ubuntu_22@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 11:43:04 by hnataraj          #+#    #+#             */
-/*   Updated: 2025/08/06 12:19:39 by hnataraj         ###   ########.fr       */
+/*   Updated: 2025/08/06 20:32:58 by ubuntu_22        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_puthexa(unsigned int n, char format)
 {
-	int		count;
+	int		cnt;
 	char	*hex_digits;
 
-	count = 0;
+	cnt = 0;
 	if (format == 'x')
 		hex_digits = "0123456789abcdef";
 	else
 		hex_digits = "0123456789ABCDEF";
 	if (n >= 16)
-		count += ft_puthexa(n / 16, format);
-	count += ft_putchar(hex_digits[n % 16]);
-	return (count);
+		cnt += ft_puthexa(n / 16, format);
+	cnt += ft_putchar(hex_digits[n % 16]);
+	return (cnt);
 }

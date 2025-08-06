@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnataraj <hnataraj@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: ubuntu_22 <ubuntu_22@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:44:34 by hnataraj          #+#    #+#             */
-/*   Updated: 2025/08/06 13:25:58 by hnataraj         ###   ########.fr       */
+/*   Updated: 2025/08/06 20:32:26 by ubuntu_22        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_putchar(char c)
 {
 	int	retval;
 
-	retval = -1;
+	retval = 0;
 	retval = write(1, &c, 1);
 	return (retval);
 }
