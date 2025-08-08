@@ -6,7 +6,7 @@
 /*   By: hnataraj <hnataraj@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:59:09 by hnataraj          #+#    #+#             */
-/*   Updated: 2025/08/06 12:39:59 by hnataraj         ###   ########.fr       */
+/*   Updated: 2025/08/08 14:57:19 by hnataraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,26 @@ int	ft_putnbr(int n)
 {
 	long	nr;
 	int		cnt;
+	int		res;
 
+	res = 0;
 	cnt = 0;
 	nr = n;
 	if (nr < 0)
 	{
-		cnt += ft_putchar('-');
+		if (ft_putchar('-') == -1)
+			return (-1);
 		nr *= -1;
+		cnt++;
 	}
 	if (nr >= 10)
-		cnt += ft_putnbr(nr / 10);
-	cnt += ft_putchar((nr % 10) + '0');
-	return (cnt);
+	{
+		res = ft_putnbr(nr / 10);
+		if (res == -1)
+			return (-1);
+		cnt += res;
+	}
+	if (ft_putchar((nr % 10) + '0') == -1)
+		return (-1);
+	return (cnt + 1);
 }

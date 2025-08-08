@@ -6,7 +6,7 @@
 /*   By: hnataraj <hnataraj@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 11:53:51 by hnataraj          #+#    #+#             */
-/*   Updated: 2025/08/06 12:14:20 by hnataraj         ###   ########.fr       */
+/*   Updated: 2025/08/08 14:57:23 by hnataraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 int	ft_putstr(char *str)
 {
+	int	retval;
 	int	cnt;
 
+	retval = 0;
 	cnt = 0;
 	if (!str)
 	{
-		cnt = write(1, "(null)", 6);
-		return (cnt);
+		retval = write(1, "(null)", 6);
+		return (retval);
 	}
 	while (str[cnt])
 	{
-		write(1, &str[cnt], 1);
-		cnt++;
+		retval = write(1, &str[cnt], 1);
+		if (retval == -1)
+			return (-1);
+		cnt += retval;
 	}
 	return (cnt);
 }
